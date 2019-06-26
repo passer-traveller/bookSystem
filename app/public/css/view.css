@@ -1,0 +1,13 @@
+.textCenter {
+    text-align: center;
+}
+.operateBtn ul li{
+    /* margin-top: 20%; */
+}
+.top35{
+    margin-top: 35px;
+}
+.addPhoto ul li {
+    float: left;
+    display: block;
+}

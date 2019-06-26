@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bookSystem</title>
+    <link rel="stylesheet" href="/public/css/common.css">
+    <link rel="stylesheet" href="/public/css/view.css">
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+    <link href="http://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css" rel="stylesheet">
+
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/moment.js/2.10.3/moment-with-locales.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="http://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+</head>
+<body>
+    <div class="blue">
+        <div class="panel panel-default">
+            <div class="panel-heading textCenter">图书管理系统</div>
+            <div class="panel-body" style="height: 570px;">
+                <div class="row">
+                    <div class="col-xs-3 textCenter">
+                        <div>
+                            <h3>{{name}}</h3>
+                            <div>
+                                <a href="/">
+                                    <img src="/public/image/img1.jpg" width="100%" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row top35">
+                            <div class="col-xs-6 operateBtn">
+                                <ul>
+                                    <li><a href="/bookAdd/view" class="btn btn-primary">新增图书</a></li>
+                                    <li><a href="javascript:;" class="btn btn-primary">图书维护</a></li>
+                                    <li><a href="javascript:;" class="btn btn-primary">图书出借</a></li>
+                                    <li><a href="javascript:;" class="btn btn-primary">密码修改</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-6 operateBtn">
+                                <ul>
+                                    <li><a href="/bookShelves/view" class="btn btn-primary">图书上架</a></li>
+                                    <li><a href="javascript:;" class="btn btn-primary">会员管理</a></li>
+                                    <li><a href="javascript:;" class="btn btn-primary">图书归还</a></li>
+                                    <li><a href="javascript:;" class="btn btn-primary">退出系统</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-9">
+                        <div class="addContent">
+                            <div class="addTitle row">
+                                <div class="addPhoto col-xs-4">
+                                    <ul>
+                                        <li style="width: 140px;height:140px;border:1px solid #ccc;"></li>
+                                        <li ><img src="/public/image/tushu1.jpg" style="width: 140px;height: 140px;" alt=""></li>
+                                    </ul>
+                                </div>
+                                <div class="addMsg col-xs-8">
+                                    <h4>图书基本信息</h4>
+                                    <form class="form-horizontal" method="POST" action="/bookAdd/add">
+                                        <div class="form-group">
+                                            <div class="">
+                                                <label for="bookName" class="col-xs-2 control-label">图书名称:</label>
+                                                <div class="col-xs-4">
+                                                    <input type="text" name="bookName" class="form-control" id="bookName" placeholder="图书名称">
+                                                </div>
+                                            </div>
+                                            <div class="">
+                                                <label for="bookCategory" class="col-xs-2 control-label">图书分类:</label>
+                                                <div class="col-xs-4">
+                                                    <input type="text" name="bookCategory" class="form-control" id="bookCategory" placeholder="图书分类">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="">
+                                                <label for="publisherId" class="col-xs-2 control-label">出版社:</label>
+                                                <div class="col-xs-4">
+                                                    <input type="text" name="publisherId" class="form-control" id="publisherId" placeholder="出版社">
+                                                </div>
+                                            </div>
+                                            <div class="">
+                                                <label for="publishDate" class="col-xs-2 control-label">出版日期:</label>
+                                                <div class='input-group col-xs-4 date' id='publishDate'>
+                                                        <input type='text' name="publishDate" class="form-control" />
+                                                        <span class="input-group-addon">
+                                                            <span class="glyphicon glyphicon-calendar"></span>
+                                                        </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="">
+                                                <label for="author" class="col-xs-2 control-label">主编人:</label>
+                                                <div class="col-xs-4">
+                                                    <input type="text" name="author" class="form-control" id="author" placeholder="图书名称">
+                                                </div>
+                                            </div>
+                                            <div class="">
+                                                <label for="unitPrice" class="col-xs-2 control-label">图书原价:</label>
+                                                <div class="col-xs-4">
+                                                    <input type="text" name="unitPrice" class="form-control" id="unitPrice" placeholder="图书原价">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="">
+                                                <label for="barCode" class="col-xs-2 control-label">图书条码:</label>
+                                                <div class="col-xs-4">
+                                                    <input type="text" name="barCode" class="form-control" id="barCode" placeholder="图书条码">
+                                                </div>
+                                            </div>
+                                            <div class="">
+                                                <label for="bookCount" class="col-xs-2 control-label">收藏总数:</label>
+                                                <div class="col-xs-4">
+                                                    <input type="text" name="bookCount" class="form-control" id="bookCount" placeholder="收藏总数">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="">
+                                                <label for="bookPosition" class="col-xs-2 control-label">书架位置:</label>
+                                                <div class="col-xs-4">
+                                                    <input type="text" name="bookPosition" class="form-control" id="bookPosition" placeholder="书架位置">
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <label for="" class="col-xs-2"></label>
+                                                <button type="submit" class="btn btn-default">Submit</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="addList" style="height:200px;width:100%;display:block;overflow-y:auto;">
+                                <table id="" class="table table-striped table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>书籍条码</th>
+                                            <th>图书名称</th>
+                                            <th>出版社</th>
+                                            <th>主编</th>
+                                            <th>收藏总数</th>
+                                            <th>可借总数</th>
+                                            <th>书架位置</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for item in listData %}
+                                        <tr>
+                                            <td>{{ loop.index }}</td>
+                                            <td>{{ item.barCode }}</td>
+                                            <td>{{ item.bookName }}</td>
+                                            <td>{{ item.publisherId }}</td>
+                                            <td>{{ item.author }}</td>
+                                            <td>{{ item.bookCount }}</td>
+                                            <td>{{ item.remainder }}</td>
+                                            <td>{{ item.bookPosition }}</td>
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                                <!-- <div id="demo"></div> -->
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    $('#publishDate').datetimepicker({
+        format: 'YYYY-MM-DD',
+        locale: moment.locale('zh-cn'),
+        showClose:false	//是否显示关闭 按钮
+        // viewMode: 'days',//天数模块展示，months则为以月展示
+        // daysOfWeekDisabled: false,//星期几 禁止选择,参数 [num],多个逗号隔开
+        // calendarWeeks: false,	//显示 周 是 今年第几周
+        // toolbarPlacement:'default', //工具摆放的位置，top 则为上，默认为底
+        // showTodayButton:false,	//是否工具栏 显示 直达今天天数的 按钮，默认false
+        // showClear:false, //是否 工具栏显示  清空 输入框  的按钮。默认false
+
+    });
+    var dataSet = [
+        ['Trident','Internet Explorer 4.0','Win 95+','4','X'],
+        ['Trident','Internet Explorer 5.0','Win 95+','5','C'],
+        ['Trident','Internet Explorer 5.5','Win 95+','5.5','A'],
+        ['Trident','Internet Explorer 6','Win 98+','6','A']
+    ];
+ 
+$(document).ready(function() {
+    $('#demo').html( '<table cellpadding="0" cellspacing="0" border="0" class="display" id="example"></table>' );
+ 
+    $('#example').dataTable( {
+        "data": dataSet,
+        "columns": [
+            { "title": "Engine" },
+            { "title": "Browser" },
+            { "title": "Platform" },
+            { "title": "Version", "class": "center" },
+            { "title": "Grade", "class": "center" }
+        ],
+        "language": {
+            "lengthMenu": "每页 _MENU_ 条记录",
+            "sLengthMenu": "显示 _MENU_ 项结果",
+            "zeroRecords": "没有找到记录",
+            "info": "显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项",
+            "infoEmpty": "无记录",
+            "infoFiltered": "(从 _MAX_ 条记录过滤)",
+            "sProcessing" : "正在加载数据...",
+            "sInfoPostFix": "",
+            "sUrl": "",
+            "sEmptyTable": "表中数据为空",
+            "sLoadingRecords": "载入中...",
+            "sInfoThousands": ",",
+            "paginate": {
+                "previous": "上页",
+                "next": "下页",
+                "first": "首页",
+                "last": "末页"
+            },
+            "search": "搜索：",
+            "oAria": {
+                "sSortAscending": ": 以升序排列此列",
+                "sSortDescending": ": 以降序排列此列"
+            }
+        },
+    } );
+} );
+</script>
+</html>

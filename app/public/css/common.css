@@ -1,0 +1,17 @@
+*, html {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+li {
+    margin-top: 10px;
+}
+.blue {
+    background: #007fff;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+}
+
