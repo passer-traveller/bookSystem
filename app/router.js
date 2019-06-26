@@ -7,14 +7,16 @@ module.exports = app => {
   const { router, controller } = app;
   // router.get('/', controller.home.index);
   router.get('/test', controller.test.index);
-  router.get('/', controller.view.index);
+  // index
+  router.get('/', controller.index.index);
+  // 首页
+  router.get('/home', controller.home.index);
   // 图书添加
   router.get('/bookAdd/view', controller.bookAdd.index);
   router.post('/bookAdd/add', controller.bookAdd.add);
   // router.post('/bookAdd/list', controller.bookAdd.list);
   // 图书上架
   router.get('/bookShelves/view', controller.bookShelves.index);
-  router.get('/njTest', controller.njTest.index);
   // // 图书维护
   // router.get('/maintain', controller.maintain.index);
   // // 会员管理

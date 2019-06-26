@@ -1,0 +1,43 @@
+<div class="panel panel-default">
+    <div class="panel-heading textCenter">图书管理系统</div>
+    <div class="panel-body" style="height: 570px;">
+        <div class="row">
+            <div class="col-xs-3 textCenter">
+                <div>
+                    <h3>{{name}}</h3>
+                    <div>
+                        <a href="/">
+                            <img src="/public/image/img1.jpg" width="100%" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="row top35">
+                    <div class="col-xs-6 operateBtn">
+                        <ul>
+                            <li><a href="javascript:;" class="btn btn-primary" id="bookAddBtn">新增图书</a></li>
+                            <li><a href="javascript:;" class="btn btn-primary" id="njTest">图书维护</a></li>
+                            <li><a href="javascript:;" class="btn btn-primary">图书出借</a></li>
+                            <li><a href="javascript:;" class="btn btn-primary">密码修改</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-6 operateBtn">
+                        <ul>
+                            <!-- <li><a href="/bookShelves/view" class="btn btn-primary" id="shelvesBtn">图书上架</a></li> -->
+                            <li><a href="javascript:;" class="btn btn-primary" id="shelvesBtn">图书上架</a></li>
+                            <li><a href="javascript:;" class="btn btn-primary">会员管理</a></li>
+                            <li><a href="javascript:;" class="btn btn-primary">图书归还</a></li>
+                            <li><a href="javascript:;" class="btn btn-primary">退出系统</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-9">
+                    <div id="model">
+                        <img src='/public/image/img1.jpg' width="100%" height="519px" alt="">
+                    </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/public/js/home.js"></script>

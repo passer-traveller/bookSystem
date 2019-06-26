@@ -5,12 +5,7 @@ const Controller = require('egg').Controller;
 
 class ViewController extends Controller {
   async index() {
-    const data = {
-      viewFlag: true,
-      name: '首页',
-      url: '/public/image/img1.jpg',
-    };
-    await this.ctx.render('view.nj', data);
+    await this.ctx.render('index.nj');
   }
 }
 
