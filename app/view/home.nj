@@ -15,27 +15,26 @@
                     <div class="col-xs-6 operateBtn">
                         <ul>
                             <li><a href="javascript:;" class="btn btn-primary" id="bookAddBtn">新增图书</a></li>
-                            <li><a href="javascript:;" class="btn btn-primary" id="njTest">图书维护</a></li>
-                            <li><a href="javascript:;" class="btn btn-primary">图书出借</a></li>
-                            <li><a href="javascript:;" class="btn btn-primary">密码修改</a></li>
+                            <li><a href="javascript:;" class="btn btn-primary" id="maintainBtn">图书维护</a></li>
+                            <li><a href="javascript:;" class="btn btn-primary" id="bookLendingBtn">图书出借</a></li>
+                            <li><a href="javascript:;" class="btn btn-primary" id="changePwdBtn">密码修改</a></li>
                         </ul>
                     </div>
                     <div class="col-xs-6 operateBtn">
                         <ul>
                             <!-- <li><a href="/bookShelves/view" class="btn btn-primary" id="shelvesBtn">图书上架</a></li> -->
                             <li><a href="javascript:;" class="btn btn-primary" id="shelvesBtn">图书上架</a></li>
-                            <li><a href="javascript:;" class="btn btn-primary">会员管理</a></li>
-                            <li><a href="javascript:;" class="btn btn-primary">图书归还</a></li>
-                            <li><a href="javascript:;" class="btn btn-primary">退出系统</a></li>
+                            <li><a href="javascript:;" class="btn btn-primary" id="memberBtn">会员管理</a></li>
+                            <li><a href="javascript:;" class="btn btn-primary" id="bookReturnBtn">图书归还</a></li>
+                            <li><a href="javascript:;" class="btn btn-primary" id="quitSysBtn">退出系统</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="col-xs-9">
-                    <div id="model">
-                        <img src='/public/image/img1.jpg' width="100%" height="519px" alt="">
-                    </div>
-
+                <div id="model">
+                    <img src='/public/image/img1.jpg' width="100%" height="519px" alt="">
+                </div>
             </div>
         </div>
     </div>

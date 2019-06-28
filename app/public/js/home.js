@@ -4,37 +4,21 @@
     showClose:false	//是否显示关闭 按钮
 });
 $(document).ready(function() {
-    // 新增图书
-    $('#bookAddBtn').on('click', function(){
-        $.get('/bookAdd/view', function(info){
-            console.log('----->> ', info)
-            $('#model').html(info)
-        })
-    })
-    // 图书上架
-    $('#shelvesBtn').on('click', function(){
-        $.get('/bookShelves/view', function(info){
-            console.log('----->> ', info)
-            $('#model').html(info)
-        })
-    })
-    // 图书维护
-    // 会员管理
-    // 图书出借
-    // 图书归还
-    // 密码修改
-    // 退出系统
+    btnQuery('bookAddBtn', '/bookAdd/view'); // 新增图书
+    btnQuery('shelvesBtn', '/bookShelves/view'); // 图书上架
+    btnQuery('maintainBtn', '/maintain'); // 图书维护
+    btnQuery('memberBtn', '/member'); // 会员管理
+    btnQuery('bookLendingBtn', '/bookLending'); // 图书出借
+    btnQuery('bookReturnBtn', '/bookReturn'); // 图书归还
+    btnQuery('changePwdBtn', '/changePwd'); // 密码修改
+    btnQuery('quitSysBtn', '/quitSys'); // 退出系统
 
-    $('#bookAdd').on('click', function(){
-        $.get('/bookAdd/view', function(info){
-            console.log('----->> ', info)
-            $('#model').html(info)
+    function btnQuery(id, url) {
+        $('#' + id).on('click', function(){
+            $.get(url, function (info) {
+                console.log('----->> ', info)
+                $('#model').html(info)
+            })
         })
-    })
-    // $('#njTest').on('click', function(){
-    //     $.get('/njTest', function(info){
-    //         console.log('----->> ', info)
-    //         $('#model').html(info)
-    //     })
-    // })
+    }
 } );
