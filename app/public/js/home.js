@@ -11,7 +11,7 @@ $(document).ready(function() {
     btnQuery('bookLendingBtn', '/bookLending'); // 图书出借
     btnQuery('bookReturnBtn', '/bookReturn'); // 图书归还
     btnQuery('changePwdBtn', '/changePwd'); // 密码修改
-    btnQuery('quitSysBtn', '/quitSys'); // 退出系统
+    // btnQuery('quitSysBtn', '/quitSys'); // 退出系统
 
     function btnQuery(id, url) {
         $('#' + id).on('click', function(){
@@ -21,4 +21,10 @@ $(document).ready(function() {
             })
         })
     }
+    // $('#quitSysBtn').on('click', function () {
+    //     $.get('/quitSys', function (info) {
+    //         console.log('----->> ', info)
+    //         // $('#model').html(info)
+    //     })
+    // })
 } );

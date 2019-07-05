@@ -14,4 +14,12 @@ li {
     width: 100%;
     padding: 20px;
 }
+.loginBox {
+    width: 400px;
+    height: 400px;
+    /* background: #ccc; */
+    margin: 100px auto;
+    border: 1px solid #ccc;
+    padding: 0 15px;
+}
 

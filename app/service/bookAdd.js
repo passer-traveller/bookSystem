@@ -21,7 +21,6 @@ class bookAddService extends Service {
         上架时间
         */
     const result = await this.app.mysql.insert('books', {
-    //   bookId: 'bookId' + bookDate.getTime(),
       barCode: data.barCode,
       bookName: data.bookName,
       author: data.author,
